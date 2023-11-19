@@ -33,6 +33,16 @@ import { RouterModule } from '@angular/router';
     MaterialModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
+      {path: 'dashboard', component: DashboardComponent,
+        children: [
+          {path: 'home', component: HomeComponent},
+          {path: 'curso', component: CursoListaComponent},
+          {path: 'curso/:id', component: CursoDetalleComponent},
+          {path: 'producto', component: ProductoListaComponent},
+          {path: 'producto/:id', component: ProductoDetalleComponent},
+          {path: 'categoria', component: CategoriaListaComponent},
+        ]      
+      },
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ])
