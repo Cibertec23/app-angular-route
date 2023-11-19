@@ -13,6 +13,7 @@ import { ProductoListaComponent } from './dashboard/producto/producto-lista/prod
 import { ProductoDetalleComponent } from './dashboard/producto/producto-detalle/producto-detalle.component';
 import { CategoriaListaComponent } from './dashboard/categoria/categoria-lista/categoria-lista.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'dashboard', component: DashboardComponent,
